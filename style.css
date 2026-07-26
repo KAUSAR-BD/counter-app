@@ -1,0 +1,101 @@
+/* google font */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  gap: 20px;
+}
+
+.main-content {
+  width: 350px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.main-text {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.count-number {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 30px;
+  transition: 0.3s ease;
+}
+
+button {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+
+.plusBtn {
+  background: #22c55e;
+  color: white;
+}
+
+.plusBtn:hover {
+  background: #16a34a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(34, 197, 94, 0.035);
+}
+
+.minusBtn {
+  background: #ef4444;
+  color: white;
+}
+
+.minusBtn:hover {
+  background: #dc2626;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(239, 68, 68, 0.35);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .main-text {
+    font-size: 1.8rem;
+  }
+  .count-number {
+    font-size: 3rem;
+  }
+
+  button {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+}
