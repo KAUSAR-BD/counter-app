@@ -54,6 +54,10 @@ button {
   transition: all 0.3s ease;
 }
 
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 .plusBtn {
   background: #22c55e;
   color: white;
@@ -81,7 +85,6 @@ button:active {
 }
 
 @media (max-width: 480px) {
-
   body {
     display: flex;
     flex-direction: column;
