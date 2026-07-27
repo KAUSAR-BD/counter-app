@@ -5,9 +5,11 @@ const minusButton = document.getElementById("minusButton");
 let counterCount = 0;
 
 plusButton.addEventListener("click", () => {
-  console.log((counterCount = counterCount + 1));
+  counterCount = counterCount + 1;
+  counterElement.textContent = counterCount;
 });
 
 minusButton.addEventListener("click", () => {
-  console.log((counterCount = counterCount - 1));
+  counterCount = counterCount - 1;
+  counterElement.textContent = counterCount;
 });
