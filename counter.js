@@ -4,8 +4,10 @@ const minusButton = document.getElementById("minusButton");
 
 let counterCount = 0;
 
-plusButton.addEventListener("click", () => {
-  counterCount = counterCount + 1;
+const updateCounter = (value) => {
+  // plus button
+  counterCount = counterCount + value;
+
   counterElement.textContent = counterCount;
 
   if (counterCount >= 10) {
@@ -13,10 +15,10 @@ plusButton.addEventListener("click", () => {
   } else {
     plusButton.removeAttribute("disabled", false);
   }
-});
 
-minusButton.addEventListener("click", () => {
-  counterCount = counterCount - 1;
+  // minus button
+  // counterCount = counterCount - 1;
+
   counterElement.textContent = counterCount;
 
   if (counterCount <= 0) {
@@ -24,4 +26,12 @@ minusButton.addEventListener("click", () => {
   } else {
     minusButton.removeAttribute("disabled", false);
   }
+};
+
+plusButton.addEventListener("click", () => {
+  updateCounter(1);
+});
+
+minusButton.addEventListener("click", () => {
+  updateCounter(-1);
 });
